@@ -40,7 +40,7 @@ tta_pipeline = [
         ])
 ]
 train_dataloader = dict(
-    batch_size=2,
+    batch_size=1,
     num_workers=0,
     persistent_workers=False,
     sampler=dict(type='InfiniteSampler', shuffle=True),
