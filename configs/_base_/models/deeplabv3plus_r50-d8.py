@@ -1,5 +1,4 @@
 # model settings
-checkpoint='/mnt/lustre/share_data/PAT/datasets/pretrain/mmcv/resnet50_v1c-2cccc1ad.pth'
 norm_cfg = dict(type='SyncBN', requires_grad=True)
 data_preprocessor = dict(
     type='SegDataPreProcessor',
@@ -11,7 +10,7 @@ data_preprocessor = dict(
 model = dict(
     type='EncoderDecoder',
     data_preprocessor=data_preprocessor,
-    pretrained=checkpoint,
+    pretrained='data/resnet50_v1c-2cccc1ad.pth',
     backbone=dict(
         type='ResNetV1c',
         depth=50,
