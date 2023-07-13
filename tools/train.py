@@ -98,7 +98,10 @@ def main():
         # if 'runner_type' is set in the cfg
         runner = RUNNERS.build(cfg)
 
+
+    import torch
     capture.insert_capture(runner)
+    torch.use_deterministic_algorithms(True,warn_only=True)
     # start training
     runner.train()
 
